@@ -17,15 +17,17 @@ function App() {
   }, []);
 
   async function getAnimals() {
-    let url = `https://cdn.contentful.com/spaces/3buz4oreveso/environments/master/entries?access_token=${process.env.REACT_APP_ACCESS_TOKEN}`;
+    let url = `http://127.0.0.1:8080/animals`;
 
     setIsLoading(true);
     try {
       let res = await fetch(url);
+      console.log("Response: ", res);
       let data = await res.json();
       setAnimals(data);
+      console.log("data", data);
     } catch (error) {
-      console.log(error);
+      console.log("Error: ", error);
     }
     setIsLoading(false);
   }
