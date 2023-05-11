@@ -1,0 +1,91 @@
+.btn-container {
+  margin: 3rem auto;
+  justify-items: center;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  /* border: 1px solid red; */
+}
+.btns {
+  background-color: #f9f5e3;
+  border: none;
+  padding: 10%;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-family: "Darumadrop One";
+  cursor: pointer;
+}
+img.category-btn {
+  width: 80%;
+}
+
+.btn-all {
+  background-color: #f9f5e3;
+  border: none;
+  padding: 1.3rem;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-family: "Darumadrop One";
+  cursor: pointer;
+}
+
+.btns:hover,
+.btn-all:hover {
+  background-color: #d27452;
+}
+
+.btns:active {
+  background: white;
+  box-shadow: 2px 2px 2px #fc894d;
+  transition-property: background-color;
+}
+p.category-name {
+  line-height: 0;
+}
+.animal-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 18rem);
+  justify-content: center;
+  gap: 4rem;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  /* border: 1px solid red; */
+}
+
+@media only screen and (max-width: 700px) {
+  .btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .menubtns {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .btn-all {
+    padding: 0.5rem;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    font-size: 1rem;
+  }
+  .btns {
+    padding: 0.5rem;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    font-size: large;
+  }
+  img.category-btn {
+    cursor: pointer;
+    width: 50%;
+  }
+  .category-name {
+    font-size: 1rem;
+  }
+}
