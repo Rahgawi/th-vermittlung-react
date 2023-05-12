@@ -6,17 +6,17 @@ import katze from "../icons/katze.png";
 import kaninchen from "../icons/kaninchen.png";
 import papagei from "../icons/papagei.png";
 
-export default function Animals({ animals, animalAssets }) {
+export default function Animals({ animals }) {
   const [filteredAnimals, setFilteredAnimals] = useState(animals);
 
-  // console.log("animals in animals", animals);
+  console.log("animals in animals", animals);
   // console.log("filteredAnimals", filteredAnimals);
 
   function handleFilter(value) {
     const results =
       animals.length &&
       animals.filter((animal) => {
-        return animal.fields.category === value;
+        return animal.category === value;
       });
     // console.log("results", results);
     setFilteredAnimals(results);
@@ -54,18 +54,9 @@ export default function Animals({ animals, animalAssets }) {
         </div>
         <div className="animal-cards">
           {filteredAnimals.length
-            ? filteredAnimals.map((item) => {
-                const singleAnimalAsset = animalAssets.find(
-                  (asset) => asset.sys.id === item.fields.animalImage.sys.id
-                );
-                return (
-                  <AnimalCard
-                    singleAnimal={item}
-                    animalPicture={singleAnimalAsset}
-                    key={singleAnimalAsset.sys.id}
-                  />
-                );
-              })
+            ? filteredAnimals.map((item) => (
+                <AnimalCard singleAnimal={item} key={item.animalId} />
+              ))
             : " ...loading"}
         </div>
       </div>

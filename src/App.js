@@ -38,23 +38,10 @@ function App() {
       {!isLoading ? (
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="animals"
-            element={
-              <Animals
-                animals={animals.items}
-                animalAssets={animals.includes.Asset}
-              />
-            }
-          />
+          <Route path="animals" element={<Animals animals={animals} />} />
           <Route
             path="animalprofile/:animalID"
-            element={
-              <AnimalProfile
-                animals={animals.items}
-                animalAssets={animals.includes.Asset}
-              />
-            }
+            element={<AnimalProfile animals={animals} />}
           />
           <Route path="contact" element={<Contact />} />
         </Routes>
