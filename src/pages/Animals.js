@@ -9,7 +9,7 @@ import papagei from "../icons/papagei.png";
 export default function Animals({ animals }) {
   const [filteredAnimals, setFilteredAnimals] = useState(animals);
 
-  console.log("animals in animals", animals);
+  //console.log("animals in animals", animals);
   // console.log("filteredAnimals", filteredAnimals);
 
   function handleFilter(value) {
@@ -55,7 +55,7 @@ export default function Animals({ animals }) {
         <div className="animal-cards">
           {filteredAnimals.length
             ? filteredAnimals.map((item) => (
-                <AnimalCard singleAnimal={item} key={item.animalId} />
+                <AnimalCard singleAnimal={item} key={item.animalid} />
               ))
             : " ...loading"}
         </div>

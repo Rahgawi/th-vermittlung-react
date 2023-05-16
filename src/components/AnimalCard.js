@@ -9,12 +9,9 @@ export default function AnimalCard({ singleAnimal }) {
 
   return (
     <div className="animalCard">
-      <Link to={`../animalprofile/${singleAnimal.animalId}`}>
+      <Link to={`../animalprofile/${singleAnimal.animalid}`}>
         <div className="animalImageContainer">
-          <img
-            src={"https:" + singleAnimal.animalImageUrl}
-            alt={singleAnimal.breed}
-          />
+          <img src={singleAnimal.animalimageurl} alt={singleAnimal.breed} />
         </div>
         <div className="cardText">
           <div className="cardHead">

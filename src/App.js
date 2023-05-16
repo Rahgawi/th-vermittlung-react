@@ -22,10 +22,10 @@ function App() {
     setIsLoading(true);
     try {
       let res = await fetch(url);
-      console.log("Response: ", res);
+      //console.log("Response: ", res);
       let data = await res.json();
       setAnimals(data);
-      console.log("data", data);
+      //console.log("data", data);
     } catch (error) {
       console.log("Error: ", error);
     }

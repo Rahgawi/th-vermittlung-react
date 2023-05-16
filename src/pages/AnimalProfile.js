@@ -4,9 +4,9 @@ import InterestForm from "../components/InterestForm";
 
 export default function AnimalProfile({ animals }) {
   const { animalID } = useParams();
-  const singleAnimal = animals.find((item) => item.animalId == animalID);
+  const singleAnimal = animals.find((item) => item.animalid == animalID);
 
-  const animalImageUrl = "https:" + singleAnimal.animalImageUrl;
+  const animalImageUrl = singleAnimal.animalimageurl;
 
   return (
     <div className="animalProfile">
