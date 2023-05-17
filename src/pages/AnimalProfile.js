@@ -43,7 +43,7 @@ export default function AnimalProfile({ animals }) {
                 </tr>
                 <tr>
                   <td>Age:</td>
-                  <td>{singleAnimal.age}</td>
+                  <td>{singleAnimal.age * 1}</td>
                 </tr>
                 <tr>
                   <td>Gender:</td>

@@ -18,7 +18,7 @@ export default function AnimalCard({ singleAnimal }) {
             <h3>{singleAnimal.name}</h3>
           </div>
           <div className="cardBody">
-            <span>{`Age: ${singleAnimal.age} years`}</span>
+            <span>{`Age: ${singleAnimal.age * 1} years`}</span>
             <span className={getGenderIcon(singleAnimal.gender)}></span>
           </div>
         </div>
